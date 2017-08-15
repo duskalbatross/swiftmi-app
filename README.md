@@ -16,11 +16,28 @@ Swift 开发 QQ 交流群：305170435
 ![demo](swiftmi.gif)
 
 ## 构建
-
-1. git clone https://github.com/feiin/swiftmi-app swiftmi
-2. cd swiftmi && git submodule update --init --recursive
-3. cd swiftmi && pod install
-4. 打开 XCode 编译运行即可
+fork出来的项目，原始项目无法正常运行，需要按照以下方法操作，可能是添加子模块的时候使用的commit已经不存在，需要重新添加。
+1. git clone https://github.com/duskalbatross/swiftmi-app.git swiftmi
+2. 删除子模块
+```
+cd swiftmi
+git rm --cached Alamofire
+git rm --cached Kingfisher
+git rm --cached SwiftyJSON
+```
+3. 编辑`.gitmodules`文件，删除以上三个的配置
+4. 标记`.git/config`文件，删除文件中以上三个子模块的配置
+5. 手动删除以上三个目录：`rm -rf Alamofire Kingfisher SwiftyJSON`
+6. 重新添加子模块:
+```
+git submodule add https://github.com/Alamofire/Alamofire.git
+git submodule add https://github.com/onevcat/Kingfisher.git
+git submodule add https://github.com/SwiftyJSON/SwiftyJSON.git
+```
+7. cd swiftmi && pod install
+8. 启动xcode，打开swiftmi.xcworkspace
+9. 修改Target swiftmi的Signing信息为Automatically manage signing，并选择自己的Team
+10. 修改Bundle Identifier，为自己的ID，因为swiftmi需要推送功能，所以该ID必须有推送的功能，需要登录 https://developer.apple.com 创建，并勾选Push Notifications。
 
 ## 更新
 

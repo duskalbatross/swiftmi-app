@@ -6,4 +6,4 @@
 	url = https://github.com/onevcat/Kingfisher.git
 [submodule "SwiftyJSON"]
 	path = SwiftyJSON
-	url = git@github.com:IBM-Swift/SwiftyJSON.git
+	url = https://github.com/SwiftyJSON/SwiftyJSON.git

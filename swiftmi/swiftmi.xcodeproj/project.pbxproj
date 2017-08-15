@@ -751,7 +751,7 @@
 				FDFC60EB1AC2E99F00BECD22 /* Alamofire.framework */,
 				FDFC60EF1AC2E99F00BECD22 /* Alamofire iOS Tests.xctest */,
 				FDFC60ED1AC2E99F00BECD22 /* Alamofire.framework */,
-				FDFC60F11AC2E99F00BECD22 /* Alamofire OSX Tests.xctest */,
+				FDFC60F11AC2E99F00BECD22 /* Alamofire macOS Tests.xctest */,
 				FDF967831C61F1E6009B8B5F /* Alamofire.framework */,
 				FDF967851C61F1E6009B8B5F /* Alamofire tvOS Tests.xctest */,
 				FD876BDB1BB25458008FDDEE /* Alamofire.framework */,
@@ -864,7 +864,7 @@
 				TargetAttributes = {
 					FD0CAFDC1ABF1D1D00945EB7 = {
 						CreatedOnToolsVersion = 6.2;
-						DevelopmentTeam = 367KWF5YZX;
+						DevelopmentTeam = 7U2R5EW799;
 						LastSwiftMigration = 0800;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
@@ -1039,10 +1039,10 @@
 			remoteRef = FDFC60EE1AC2E99F00BECD22 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		FDFC60F11AC2E99F00BECD22 /* Alamofire OSX Tests.xctest */ = {
+		FDFC60F11AC2E99F00BECD22 /* Alamofire macOS Tests.xctest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
-			path = "Alamofire OSX Tests.xctest";
+			path = "Alamofire macOS Tests.xctest";
 			remoteRef = FDFC60F01AC2E99F00BECD22 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
@@ -1167,7 +1167,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		EBA2CF5F0242D0CDCC816721 /* [CP] Check Pods Manifest.lock */ = {
@@ -1182,7 +1182,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -1390,7 +1390,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer: yin yang (P46MBKY6PM)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEVELOPMENT_TEAM = 367KWF5YZX;
+				DEVELOPMENT_TEAM = 7U2R5EW799;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1405,7 +1405,7 @@
 					"$(PROJECT_DIR)/ShareSDK/extends/WeChatSDK",
 				);
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = com.swiftmi.swiftmi;
+				PRODUCT_BUNDLE_IDENTIFIER = com.xixicloud.swiftmi;
 				PRODUCT_NAME = swiftmi;
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=*]" = "";
@@ -1427,7 +1427,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEVELOPMENT_TEAM = 367KWF5YZX;
+				DEVELOPMENT_TEAM = 7U2R5EW799;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1442,7 +1442,7 @@
 					"$(PROJECT_DIR)/ShareSDK/extends/WeChatSDK",
 				);
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = com.swiftmi.swiftmi;
+				PRODUCT_BUNDLE_IDENTIFIER = com.xixicloud.swiftmi;
 				PRODUCT_NAME = swiftmi;
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
